@@ -8,5 +8,6 @@ do
 	tail_lines=`expr $lines + 1`
 	tail -n +`echo $tail_lines` $file > tmp.html
 	./html2text.py tmp.html >> $markdown
-	rm tmp.html $file
+	rm tmp.html
+	# rm $file
 done
